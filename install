@@ -1,0 +1,7 @@
+#!/bin/sh
+
+export PERLPATH="`which perl`"
+echo "#!$PERLPATH" > mudsh.build
+cat mudsh-1.2.perl >> mudsh.build
+chmod +x mudsh.build
+sudo cp mudsh.build  `dirname $PERLPATH`/mudsh
