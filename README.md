@@ -102,7 +102,20 @@ Is there any reason why a shell (or command line) cannot be as tolerant or as in
 
 ## Installation
 
-You require PERL Version 5. Download the script and copy to required directory. You may need to change the first line depending on the location of your copy of PERL (usually /usr/local/bin/perl or /usr/bin/perl, but could be anywhere, try whereis perl or suchlike). Next set permissions so that the script can be executed, chmod 755 mudsh or suchlike. To use try ./mudsh or suchlike.
+### Dependencies
+- PERL 5
+
+### Using Install Script
+    
+    $ ./install
+    
+This will generate a proper #! header for your system using `which perl` and install mudsh to the same directory. Then,
+
+    $ mudsh
+    
+If for some reason this does not work for your system, you'll need to edit the files yourself. See ./install for instructions.
+
+### Using mudsh as the Default Login Shell
 
 If you want to use mudsh as a default login shell, you may need to edit /etc/shells. In summary:
 
